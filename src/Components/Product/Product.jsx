@@ -4,7 +4,7 @@ import axios from "axios";
 import {useParams} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 
-const Product = () => {
+const Product = ({ setProductsInCart, productsInCart }) => {
     const [product, setProduct] = useState({});
     let {productId} = useParams();
 
@@ -16,6 +16,7 @@ const Product = () => {
     let navigate = useNavigate();
 
     const addToCartHandler = () => {
+        setProductsInCart([...productsInCart, product]); // Додаємо товар у корзи
         navigate(`/cart`);
     }
 

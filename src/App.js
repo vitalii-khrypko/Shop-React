@@ -15,9 +15,19 @@ function App() {
             <div className="App">
                 <Header />
                 <Routes>
-                    <Route path="/" element={<BestSellers productsInCart={productsInCart} setProductsInCart={setProductsInCart} />} />
-                    <Route path="/product/:productId" element={<Product />} />
-                    <Route path="/cart" element={<Cart productsInCart={productsInCart} />} />
+                    <Route
+                        path="/"
+                        element=
+                            {<BestSellers productsInCart={productsInCart} setProductsInCart={setProductsInCart} />}
+                    />
+                    <Route
+                        path="/product/:productId"
+                        element={<Product productsInCart={productsInCart} setProductsInCart={setProductsInCart} />}
+                    />
+                    <Route
+                        path="/cart"
+                        element={<Cart productsInCart={productsInCart} setProductsInCart={setProductsInCart} />}
+                    />
                 </Routes>
                 <Footer />
             </div>
