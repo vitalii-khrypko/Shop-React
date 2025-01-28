@@ -1,9 +1,9 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import BestSellersItem from "./BestSellersItem/BestSellersItem";
 import "./BestSellers.css";
 
-const BestSellers = () => {
+const BestSellers = ({ productsInCart, setProductsInCart }) => {
     let [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -15,11 +15,16 @@ const BestSellers = () => {
 
     return (
         <div className="BestSellers">
-            {
-                products.map((product) => <BestSellersItem product={product} key={product.id} />)
-            }
+            {products.map((product) => (
+                <BestSellersItem
+                    product={product}
+                    key={product.id}
+                    setProductsInCart={setProductsInCart}
+                    productsInCart={productsInCart}
+                />
+            ))}
         </div>
-    )
+    );
 }
 
 export default BestSellers;
