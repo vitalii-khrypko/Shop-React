@@ -2,3 +2,19 @@
     background-color: seagreen;
     height: 70px;
 }
+
+.Header nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Header a {
+    text-decoration: none;
+    padding-top: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.Header a:hover {
+    color: #afaeae;
+}
