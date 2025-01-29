@@ -1,20 +1,32 @@
 .Header {
-    background-color: seagreen;
+    background-color: orange;
     height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .Header nav {
     display: flex;
-    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .Header a {
     text-decoration: none;
-    padding-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background 0.3s;
+    border-radius: 5px;
     color: white;
-    cursor: pointer;
 }
 
 .Header a:hover {
-    color: #afaeae;
+    color: #fff;
+    background: #ffb300;
 }

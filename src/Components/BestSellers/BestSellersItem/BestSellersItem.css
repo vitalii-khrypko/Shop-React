@@ -1,17 +1,56 @@
 .BestSellersItem {
-    width: 20%;
-    border: 3px solid lightgray;
-    margin: 10px;
-    padding: 10px;
+    width: 15%; /* Збільшуємо ширину для кращого вигляду */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для кращого вигляду */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.BestSellersItem:hover {
+    transform: translateY(-5px); /* Легке підняття при ховері */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Сильніша тінь при ховері */
 }
 
 .BestSellersItem img {
-    height: 100px;
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.BestSellersItem h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.BestSellersItem p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
 }
 
 .BestSellersItem button {
-    padding: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+    background-color: #ffb300;
+    color: white;
+    border: none;
     border-radius: 5px;
-    margin: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.BestSellersItem button:hover {
+    background-color: #ffa000; /* Темніший відтінок жовтого при ховері */
+    transform: translateY(-2px); /* Легке підняття кнопки */
+}
+
+.BestSellersItem button:focus {
+    outline: none;
 }

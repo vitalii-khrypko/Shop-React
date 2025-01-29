@@ -2,16 +2,64 @@
     display: flex;
     padding: 50px;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Product img {
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Product .ProductDetails {
     margin: 0 0 0 30px;
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
+}
+
+.Product h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.Product h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.Product p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.Product button {
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #ffb300;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 200px;
+}
+
+.Product button:hover {
+    background-color: #ffa000; /* Темніший відтінок жовтого при ховері */
+    transform: translateY(-2px); /* Легке підняття кнопки */
+}
+
+.Product button:focus {
+    outline: none;
 }

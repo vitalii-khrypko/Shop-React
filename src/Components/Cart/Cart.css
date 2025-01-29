@@ -1,17 +1,47 @@
 .CartItem {
-    width: 20%;
-    border: 3px solid lightgray;
-    margin: 10px;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .CartItem img {
+    width: 100px;
     height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.CartItem h2 {
+    font-size: 16px;
+    color: #212121;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.CartItem p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffb300;
+    margin: 0;
 }
 
 .CartItem button {
-    padding: 10px;
+    background: #ffb300;
+    color: white;
+    border: none;
+    padding: 8px 12px;
     border-radius: 5px;
-    margin: 5px;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+.CartItem button:hover {
+    background: #e64a19;
 }
