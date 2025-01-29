@@ -72,3 +72,9 @@
 .BestSellersItem .favIcon:focus {
     outline: none; /* Видалення контурів при фокусі */
 }
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

@@ -1,11 +1,18 @@
-import "./Favourites.css";
+import { useNavigate } from "react-router-dom";
 
-const Favourites = ({productsInFavourites, setProductsInFavourites}) => {
+const Favourites = ({ productsInFavourites, setProductsInFavourites, setProductsInCart, productsInCart }) => {
+    let navigate = useNavigate();
+
+    const addToCartHandler = (product) => {
+        setProductsInCart([...productsInCart, product]); // Додаємо вибраний товар
+        navigate(`/cart`);
+    };
+
     const removeProductsFromFavourites = (indexToRemove) => {
         setProductsInFavourites(productsInFavourites.filter((_, index) => index !== indexToRemove));
-    }
+    };
 
-    return(
+    return (
         <div className="Favourites">
             <h1>Your Favourites</h1>
             {productsInFavourites.length === 0 ? (
@@ -16,13 +23,13 @@ const Favourites = ({productsInFavourites, setProductsInFavourites}) => {
                         <img src={product.image} alt={product.title} />
                         <h2>{product.title}</h2>
                         <p>${product.price}</p>
-                        <button>Add to Cart</button>
+                        <button onClick={() => addToCartHandler(product)}>Add to Cart</button>
                         <button onClick={() => removeProductsFromFavourites(index)}>Remove From Favourites</button>
                     </div>
                 ))
             )}
         </div>
-    )
-}
+    );
+};
 
 export default Favourites;

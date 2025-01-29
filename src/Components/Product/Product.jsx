@@ -16,7 +16,7 @@ const Product = ({ setProductsInCart, productsInCart }) => {
     let navigate = useNavigate();
 
     const addToCartHandler = () => {
-        setProductsInCart([...productsInCart, product]); // Додаємо товар у корзи
+        setProductsInCart([...productsInCart, product]); // adding products to Cart
         navigate(`/cart`);
     }
 
