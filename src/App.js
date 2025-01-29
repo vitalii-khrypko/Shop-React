@@ -6,9 +6,11 @@ import { useState } from 'react';
 import BestSellers from './Components/BestSellers/Bestsellers';
 import Cart from './Components/Cart/Cart';
 import Product from './Components/Product/Product';
+import Favourites from "./Components/Favourites/Favourites";
 
 function App() {
     const [productsInCart, setProductsInCart] = useState([]);
+    const [productsInFavourites, setProductsInFavourites] = useState([]);
 
     return (
         <Router basename="/Shop-React">
@@ -17,8 +19,10 @@ function App() {
                 <Routes>
                     <Route
                         path="/"
-                        element=
-                            {<BestSellers productsInCart={productsInCart} setProductsInCart={setProductsInCart} />}
+                        element={<BestSellers
+                            productsInCart={productsInCart} setProductsInCart={setProductsInCart}
+                            productsInFavourites={productsInFavourites} setProductsInFavourites={setProductsInFavourites}
+                        />}
                     />
                     <Route
                         path="/product/:productId"
@@ -27,6 +31,13 @@ function App() {
                     <Route
                         path="/cart"
                         element={<Cart productsInCart={productsInCart} setProductsInCart={setProductsInCart} />}
+                    />
+                    <Route
+                        path="/favourites"
+                        element={<Favourites
+                            productsInCart={productsInCart} setProductsInCart={setProductsInCart}
+                            productsInFavourites={productsInFavourites} setProductsInFavourites={setProductsInFavourites}
+                        />}
                     />
                 </Routes>
                 <Footer />

@@ -3,7 +3,7 @@ import axios from "axios";
 import BestSellersItem from "./BestSellersItem/BestSellersItem";
 import "./BestSellers.css";
 
-const BestSellers = ({ productsInCart, setProductsInCart }) => {
+const BestSellers = ({ productsInCart, setProductsInCart, productsInFavourites, setProductsInFavourites}) => {
     let [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -19,8 +19,14 @@ const BestSellers = ({ productsInCart, setProductsInCart }) => {
                 <BestSellersItem
                     product={product}
                     key={product.id}
+
+                    //add products to Cart
                     setProductsInCart={setProductsInCart}
                     productsInCart={productsInCart}
+
+                    //add products to Favourites
+                    productsInFavourites={productsInFavourites}
+                    setProductsInFavourites={setProductsInFavourites}
                 />
             ))}
         </div>

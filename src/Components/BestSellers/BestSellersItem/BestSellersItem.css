@@ -7,6 +7,8 @@
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для кращого вигляду */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .BestSellersItem:hover {
@@ -53,4 +55,20 @@
 
 .BestSellersItem button:focus {
     outline: none;
+}
+
+.BestSellersItem .favIcon {
+    color: red;          /* Колір серця */
+    cursor: pointer;     /* Курсор у вигляді руки при наведенні */
+    transition: transform 0.3s ease, color 0.3s ease;  /* Анімація для ефекту */
+    margin-top: 10px;
+}
+
+.BestSellersItem .favIcon:hover {
+    transform: scale(1.2); /* Легке збільшення іконки при ховері */
+    color: #e60000; /* Темніший червоний колір при ховері */
+}
+
+.BestSellersItem .favIcon:focus {
+    outline: none; /* Видалення контурів при фокусі */
 }
