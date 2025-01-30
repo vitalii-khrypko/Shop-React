@@ -45,3 +45,19 @@
 .CartItem button:hover {
     background: #e64a19;
 }
+
+.Total {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.Total h3 {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    color: #2e7d32;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

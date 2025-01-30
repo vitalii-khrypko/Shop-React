@@ -5,7 +5,7 @@ const Favourites = ({ productsInFavourites, setProductsInFavourites, setProducts
 
     const addToCartHandler = (product) => {
         setProductsInCart([...productsInCart, product]); // Додаємо вибраний товар
-        navigate(`/cart`);
+        // navigate(`/cart`);
     };
 
     const removeProductsFromFavourites = (indexToRemove) => {

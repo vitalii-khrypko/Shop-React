@@ -13,7 +13,7 @@ const BestSellersItem = ({ product, setProductsInCart, productsInCart, productsI
 
     const addToCartHandler = () => {
         setProductsInCart([...productsInCart, product]);
-        navigate(`/cart`);
+        // navigate(`/cart`);
     };
 
     const addToFavourites = () => {
@@ -22,7 +22,7 @@ const BestSellersItem = ({ product, setProductsInCart, productsInCart, productsI
             setTimeout(() => setMessage(""), 2000); // error message disappears in 2 sec
         } else {
             setProductsInFavourites([...productsInFavourites, product]);
-            navigate(`/favourites`);
+            // navigate(`/favourites`);
         }
     };
 
