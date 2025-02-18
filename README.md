@@ -7,6 +7,7 @@ Shop-React is an e-commerce web application built with React. The project utiliz
 - **useState** - for managing component-level state such as product data, cart items, etc.
 - **useEffect** - for handling side effects like fetching product data from an API.
 - **CSS3** - for styling the components.
+- **Axios** - for fetching data from an external API.
 
 ## Features
 - Browse through a list of products with images, descriptions, and prices.
